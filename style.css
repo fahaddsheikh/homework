@@ -1,0 +1,146 @@
+/*
+Theme Name:     Freelanceengine Child
+Theme URI:      http://enginetheme.com/
+Description:    Child theme for the FreelanceEngine theme
+Author:         enginethemes
+Author URI:     http://enginetheme.com/about/
+Template:       freelanceengine
+Version:        1.0
+*/
+
+body {
+    font-size: 13px;
+}
+
+.top-header .dropdown-menu {
+    top: 100% !important;
+    background:#fff !Important;
+}
+
+#standardmenu {
+    text-align: right;
+}
+
+#standardmenu ul > li > a {
+    padding: 20px 10px !important;
+}
+
+.top-header .row > .col-md-2 {
+    padding: 0;
+}
+
+.copyright-wrapper {
+    background: #222222;
+}
+
+a, a:hover, a:focus {
+    color: #ffae00;
+}
+
+.block-page {
+     margin-top: 0px;
+}
+
+.wpcf7-form input[type="email"] {
+    border: 1px solid #D7D9DA;
+    color: #737C85;
+    margin-bottom: 30px;
+    height: 45px;
+    padding: 0px 15px;
+    border-radius: 4px;
+}
+
+
+
+input[type="textarea"] {
+    height: 200px;
+}
+
+.wpcf7-form input[type="textarea"] {
+    height: 200px;
+}
+
+.login-form-header-wrapper a.apply.apply-btn {
+	display: inline-block;
+	border-radius: 4px;
+	vertical-align: middle;
+	border: 1px solid #FFF;
+	padding: 0px 15px;
+	margin-left: 20px;
+	line-height: 34px;
+}
+
+#header-wrapper.not-page-home .login-form-header-wrapper a.apply.apply-btn, #header-wrapper.sticky .login-form-header-wrapper a.apply.apply-btn {
+    border: 1px solid #2C3D4F;
+}
+
+.copyright-wrapper-margin-top {
+	margin-top: 0px;
+}
+
+footer {
+    margin-top: 0px;
+    background-color: #333333;
+}
+
+footer .widget ul li {
+    margin-bottom: 3px;
+}
+
+footer {
+    background: #fff;
+    display: block;
+    position: relative;
+    padding: 30px 0 0;
+    margin-top: 0px;
+}
+
+footer .textwidget {
+    line-height: 20px !important;
+}
+
+.logged-in #header-wrapper .login-form-header-wrapper {
+    position: absolute;
+    right: 0;
+    line-height: 55px;
+}
+
+#header-wrapper.not-page-home .avatar {
+	max-width:30px;
+	max-height:30px;
+}
+
+#standardmenu ul ul li a {
+    width: 400px;
+}
+
+/* POST A JOB CSS */
+
+#standardmenu ul > li#post-a-job  a {
+    color: #fff;
+    padding: 0px 12px !important;
+    line-height: 33px;
+    background-color: #FFBE00;
+    border-radius: 3px;
+}
+
+
+/* Featured Badge */
+
+.list-profile .profile-content .top-profile .name-profile {
+   	display: inline-block;
+}
+
+.single-profile-content .single-profile {
+    width: 60%;
+}
+
+.single-profile-content .list-skill-profile {
+	width:40%
+}
+
+/* Footer Hover Fix */
+
+footer .widget ul li a:hover {
+    color: #fff;
+}
