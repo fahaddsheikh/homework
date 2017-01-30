@@ -28,15 +28,18 @@
                         <h2 class="title-blog">
                         	<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
                         </h2><!-- end title -->
-                        <?php
-                            the_content();
-                            wp_link_pages( array(
-                                'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', ET_DOMAIN ) . '</span>',
-                                'after'       => '</div>',
-                                'link_before' => '<span>',
-                                'link_after'  => '</span>',
-                            ) );
-                        ?>
+                        <?php the_post_thumbnail( 'medium_large' ); ?>
+                        <div style="margin:30px 0">
+	                        <?php
+	                            the_content();
+	                            wp_link_pages( array(
+	                                'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', ET_DOMAIN ) . '</span>',
+	                                'after'       => '</div>',
+	                                'link_before' => '<span>',
+	                                'link_after'  => '</span>',
+	                            ) );
+	                        ?>
+                        </div>
                     </div>
 	            </div>
 	        </div>
