@@ -111,7 +111,7 @@ function press_release_post_type() {
         'items_list_navigation'      => __( 'Press Release Types list navigation', 'press_release_type' ),
     );
     $rewrite_taxonomy = array(
-        'slug'                       => 'release-type',
+        'slug'                       => 'press-release-type',
         'with_front'                 => true,
         'hierarchical'               => false,
     );
