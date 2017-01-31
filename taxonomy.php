@@ -33,7 +33,7 @@
 				?>
 				<div class="post-item">
 				    <div class="row">
-				        <div class="blog-wrapper col-md-12 col-xs-9" style="border:0;padding-top:0">
+				        <div class="blog-wrapper col-md-12 col-xs-9" style="border-top:0;border-bottom: 1px solid #dadfea;padding-top:0;">
 				            <div class="blog-content">
 				                <h2 class="title-blog"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
 				                <?php the_post_thumbnail( 'medium_large' ); ?>
