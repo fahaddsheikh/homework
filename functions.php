@@ -70,7 +70,7 @@ function press_release_post_type() {
         'description'           => __( 'Press Release Post Type', 'press_release' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'revisions', 'thumbnail'),
-        'taxonomies'            => array( 'category' ),
+        'taxonomies'            => array( 'press_release_type' ),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -87,6 +87,45 @@ function press_release_post_type() {
         'capability_type'       => 'page',
     );
     register_post_type( 'press_release', $args );
+
+    $labels_taxonomy = array(
+        'name'                       => _x( 'Press Release Types', 'Taxonomy General Name', 'press_release_type' ),
+        'singular_name'              => _x( 'Press Release Type', 'Taxonomy Singular Name', 'press_release_type' ),
+        'menu_name'                  => __( 'Press Release Types', 'press_release_type' ),
+        'all_items'                  => __( 'All Press Release Types', 'press_release_type' ),
+        'parent_item'                => __( 'Parent Press Release Type', 'press_release_type' ),
+        'parent_item_colon'          => __( 'Parent Press Release Type:', 'press_release_type' ),
+        'new_item_name'              => __( 'New Press Release Type Name', 'press_release_type' ),
+        'add_new_item'               => __( 'Add New Press Release Type', 'press_release_type' ),
+        'edit_item'                  => __( 'Edit Press Release Type', 'press_release_type' ),
+        'update_item'                => __( 'Update Press Release Type', 'press_release_type' ),
+        'view_item'                  => __( 'View Press Release Type', 'press_release_type' ),
+        'separate_items_with_commas' => __( 'Separate Press Release Types with commas', 'press_release_type' ),
+        'add_or_remove_items'        => __( 'Add or remove Press Release Types', 'press_release_type' ),
+        'choose_from_most_used'      => __( 'Choose from the most used Press Release Types', 'press_release_type' ),
+        'popular_items'              => __( 'Popular Press Release Types', 'press_release_type' ),
+        'search_items'               => __( 'Search Press Release Types', 'press_release_type' ),
+        'not_found'                  => __( 'Press Release Types Not Found', 'press_release_type' ),
+        'no_terms'                   => __( 'No Press Release Types', 'press_release_type' ),
+        'items_list'                 => __( 'Press Release Types list', 'press_release_type' ),
+        'items_list_navigation'      => __( 'Press Release Types list navigation', 'press_release_type' ),
+    );
+    $rewrite_taxonomy = array(
+        'slug'                       => 'release-type',
+        'with_front'                 => true,
+        'hierarchical'               => false,
+    );
+    $args_taxonomy = array(
+        'labels'                        => $labels_taxonomy,
+        'hierarchical'                  => true,
+        'public'                        => true,
+        'show_ui'                       => true,
+        'show_admin_column'             => true,
+        'show_in_nav_menus'             => true,
+        'show_tagcloud'                 => true,
+        'rewrite'                       => $rewrite_taxonomy,
+    );
+    register_taxonomy( 'press_release_type', array( 'press_release' ), $args_taxonomy );
 
 }
 add_action( 'init', 'press_release_post_type', 0 );
